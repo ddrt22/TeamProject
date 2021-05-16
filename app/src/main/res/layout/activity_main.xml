@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!-- 액션바 제거 후 툴바 사용-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="대피소"
+        app:titleTextColor="#ffffff" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/EQList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지진" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/TNMList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="해일" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/VList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="화산" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+        <fragment
+            android:name="com.example.wonbaeteamtest.EList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Efragment" />
+    </FrameLayout>
+</LinearLayout>
